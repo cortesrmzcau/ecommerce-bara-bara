@@ -1,0 +1,109 @@
+
+////////////////////////////////////////
+//////////////   Brand   //////////////
+//////////////////////////////////////
+
+.sidebar {
+  position: fixed;
+  background-color: var(--color-blue-primary);
+  width: 260px;
+  height: 100%;
+  transition: all .5s ease;
+  cursor: default;
+  .brand {
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-blue-background-brand-sidebar);
+    .d-flex {
+      height: 100%;
+        div {
+          i.fa {
+            font-size: 26px;
+            color: var(--color-white);
+          }
+        }
+        p {
+          font-size: 20px;
+          font-weight: normal;
+          color: var(--color-white);
+          margin: 0 0 0 15px;
+        }
+      }
+  }
+  .profile {
+    width: 100%;
+    background-color: var(--color-blue-bg-profile-sidebar);
+      div {
+        margin: 0 auto;
+        padding: 25px 0 10px 0;
+        i.fa {
+          font-size: 70px;
+          color: var(--color-white);
+        }
+      }
+      p {
+        font-size: 16px;
+        color: var(--color-white);
+        text-align: center;
+        &:nth-child(even) {
+          margin: 0;
+          padding: 10px 0 0 0;
+        }
+        &:nth-child(odd) {
+          margin: 0;
+          padding: 0 0 25px 0;
+        }
+      }
+  }
+  .menu {
+    .title {
+      padding: 0 20px;
+        .align-items-center {
+          p {
+            font-size: 14px;
+            color: var(--color-white);
+            margin-bottom: 0;
+            padding: 20px 0;
+          }
+          .line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-line-bg);
+            margin-left: 10px;
+          }
+        }
+      }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+    li {
+      height: 50px;
+      padding: 0 20px;
+      cursor: pointer;
+      justify-content: space-between;
+      &:hover {
+          background-color: var(--color-white);
+          cursor: pointer;
+          p {
+            color: var(--color-blue-primary);
+            }
+          i {
+            color: var(--color-blue-primary);
+          }
+      }
+      p {
+        color: var(--color-white);
+        font-size: 16px;
+        margin: 0;
+      }
+      i {
+        color: var(--color-white);
+        font-size: 16px;
+      }
+    }
+  }
+}
+.sidebar-collapsed {
+  margin-left: -260px;
+}

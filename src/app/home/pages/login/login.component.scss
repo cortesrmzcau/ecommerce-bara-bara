@@ -1,0 +1,108 @@
+main {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  cursor: default;
+  .form {
+    background-color: var(--color-white);
+    max-width: 480px;
+    height: 100vh;
+    padding: 2.5% 2.5%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8%;
+    .title {
+      color: var(--color-blue-primary);
+      font-size: 30pt;
+      font-weight: bold;
+      text-align: center;
+    }
+    .text {
+      color: var(--color-grey-text);
+      font-size: 14pt;
+      font-weight: 400;
+      text-align: center;
+    }
+    form {
+      label {
+        color: var(--color-grey-text);
+        font-size: 13pt;
+        font-weight: 500;
+      }
+      button.button-p {
+        color: var(--color-white);
+        font-size: 14pt;
+        font-weight: 500;
+        background-color: var(--color-blue-primary);
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        &:hover {
+          background-color: var(--color-blue-primary-hover);
+        }
+      }
+      p {
+        text-align: center;
+        width: 100%;
+        color: var(--color-grey-text);
+        font-size: 12pt;
+        font-weight: 400;
+        text-align: center;
+        a {
+          color: var(--color-blue-primary);
+          font-size: 12pt;
+          font-weight: 400;
+          text-decoration: none;
+        }
+      }
+      .social {
+        padding-top: 8%;
+        button {
+          color: var(--color-white);
+          width: 100%;
+          height: 45px;
+          margin: 5px 0;
+          &.google {
+            background-color: var(--color-google);
+            border: var(--bs-btn-border-width) solid var(--color-google-border);
+            &:hover {
+              background-color: var(--color-google-degraded);
+            }
+          }
+          &.facebook {
+            background-color: var(--color-facebook);
+            border: var(--bs-btn-border-width) solid var(--color-facebook-border);
+            &.facebook:hover {
+              background-color: var(--color-facebook-degraded);
+            }
+          }
+          &.twitter {
+            background-color: var(--color-twitter);
+            border: var(--bs-btn-border-width) solid var(--color-twitter-border);
+            .twitter:hover {
+              background-color: var(--color-twitter-degraded);
+            }
+          }
+          i {
+            color: var(--color-white);
+            font-size: 15pt;
+            padding: 0;
+            margin: 0;
+          }
+          p {
+            color: var(--color-white);
+            font-size: 13pt;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.98px) {
+    .form {
+      max-width: 100%;
+      min-height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@mixin stars {
+  i {
+    color: var(--color-star);
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 260px 100%;
+  grid-auto-rows: 1fr 1fr;
+  main {
+    width: calc(100% - 260px);
+    height: 100%;
+    background-color: var(--color-background);
+    left: auto;
+    padding: 100px 30px 30px 30px;
+    transition: all .5s ease;
+    margin-left: 0;
+    .card {
+      box-shadow: var(--ct-box-shadow);
+      border-radius: 5px;
+      border: 0px;
+      height: calc(100vh - 130px);
+      cursor: default;
+      .card-body {
+        padding: 1.5rem 1.5rem;
+        .row:nth-child(odd) {
+          .col-md-6 {
+            .d-flex {
+              i {
+                font-size: 16px;
+                color: var(--color-arrow);
+              }
+              p {
+                font-size: 16px;
+                font-weight: bold;
+                color: var(--color-grey-text);
+                margin-bottom: 0;
+              }
+            }
+            p.title {
+              font-size: 22px;
+              font-weight: bold;
+              color: var(--color-title-card-product);
+              margin-bottom: 0;
+            }
+            .stars {
+              @include stars;
+            }
+            span {
+              width: 60px;
+              height: 25px;
+              font-size: 14px;
+              color: var(--color-badge-text-green);
+              background-color: var(--color-badge-gb-green);
+              margin-bottom: 10px;
+            }
+            button.btn-primary {
+              background-color: var(--color-button-bg-add-to-cart);
+              border: 1px solid var(--color-button-border-add-to-cart);
+              margin-bottom: 10px;
+              &:hover {
+                background-color: var(--color-button-bg-hover-add-to-cart);
+              }
+              i {
+                color: var(--color-white);
+                font-size: 18px;
+              }
+              p {
+                font-size: 16px;
+                color: var(--color-white);
+                margin-left: 10px;
+              }
+            }
+            p {
+              color: var(--ct-dropdown-link-color);
+              font-size: 16px;
+              text-align: justify;
+              margin-bottom: 10px;
+            }
+            .info-extra {
+              div {
+                padding-right: 25px;
+                p:nth-child(odd) {
+                  font-weight: bold;
+                  text-align: center;
+                }
+                p:nth-child(even) {
+                  font-weight: normal;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+        .row:nth-child(even) {
+          table {
+            thead {
+              color: var(--color-white);
+              background-color: var(--color-blue-primary);
+              tr {
+                height: 36px;
+                line-height: 36px;
+                th {
+                  p {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                height: 42px;
+                line-height: 42px;
+                td {
+                  cursor: pointer;
+                  p {
+                    color: var(--color-grey-text);
+                    margin-bottom: 0;
+                  }
+                  .stars {
+                    @include stars;
+                  }
+                  div {
+                    .progress.green {
+                      width: 100%;
+                      height: 5px;
+                      .progress-bar {
+                        background-color: var(--color-bar-green);
+                      }
+                    }
+                    .progress.yellow {
+                      width: 100%;
+                      height: 5px;
+                      .progress-bar {
+                        background-color: var(--color-bar-yellow);
+                      }
+                    }
+                    p {
+                      width: 20px;
+                      background-color: red;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-collapsed {
+    width: 100%;
+    margin-left: -260px;
+  }
+}

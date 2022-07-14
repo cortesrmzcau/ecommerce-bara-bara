@@ -1,0 +1,48 @@
+<nav class="navbar fixed-top navbar-expand-lg" [ngClass]="collapsed ? 'nav-collapsed' : ''">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" (click)="toggleHidden()">
+          <i class="bi bi-list"></i>
+        </li>
+        <li class="nav-item">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav-two">
+        <li>
+          <div class="d-flex button-profile">
+            <div class="d-flex align-items-center">
+              <div class="background-circle">
+                <i class="bi bi-person-circle"></i>
+              </div>
+            </div>
+            <div class="name-type">
+              <div>
+                <p>César Cortés</p>
+                <p>Custom</p>
+              </div>
+            </div>
+          </div>
+          <ul class="list-options">
+            <li class="d-flex align-items-center">
+              <i class="bi bi-person-circle"></i>
+              <p>Profile</p>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="bi bi-gear-fill"></i>
+              <p>Profile</p>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="bi bi-box-arrow-right"></i>
+              <p>Log out</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,54 @@
+<main>
+  <div class="form">
+    <div>
+      <div class="row">
+        <div class="col-12">
+          <p class="title">Login</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="text">Welcome to Ecommerce Bara Bara, you can find various products at affordable prices for your home, office or car</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form>
+            <div class="mb-3">
+              <label for="emailFormControl" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="emailFormControl" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="passwordFormControl" class="form-label">Password</label>
+              <input type="password" class="form-control" id="passwordFormControl" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-3">
+              <button type="button" class="btn btn-primary button-p" (click)="redirect()">Login</button>
+            </div>
+            <p class="text-12">You still do not have an account? <a routerLink="/sig-in" class="text-redirect">Sign up</a></p>
+            <div class="social">
+              <button type="button" class="btn btn-primary google">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-google"></i>
+                  <p>Login with Google</p>
+                </div>
+              </button>
+              <button type="button" class="btn btn-primary facebook">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-facebook"></i>
+                  <p>Login with Facebook</p>
+                </div>
+              </button>
+              <button type="button" class="btn btn-primary twitter">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-twitter"></i>
+                  <p>Login with Twitter</p>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ct-body-font-family) !important;
+  background-color: var(--color-background) !important;
+}
+
+:root {
+  --ct-body-font-family: Nunito,sans-serif;
+  --ct-box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+  --color-background:#f6f7fa;
+  --color-blue-primary: #097EF6;
+  --color-blue-primary-hover: #0873dd;
+  --color-grey-text: #6C7781;
+  --color-white: white;
+  --color-google: #F44336;
+  --color-google-degraded: #df372b;
+  --color-google-border: #d43328;
+  --color-facebook: #3B5998;
+  --color-facebook-degraded: #27427d;
+  --color-facebook-border: #193673;
+  --color-twitter: #55ACEE;
+  --color-twitter-degraded: #4399db;
+  --color-twitter-border: #3a8dcb;
+  --color-brackground-button-p: #FAFBFD;
+  --color-brackground-button-p-border: #F1F3FA;
+  --color-grey-text-navbar: #98a6ad;
+  --color-icon-menu-nav: #313a46;
+  --color-blue-background-brand-sidebar: #1574D6;
+  --color-blue-bg-profile-sidebar: #2D8CEF;
+  --color-line-bg: #6CB2FB;
+  --color-blue-active-option: #4DA5FF;
+  --ct-dropdown-link-hover-color: #2c343f;
+  --ct-dropdown-link-hover-bg: #f4f6fb;
+  --ct-dropdown-link-color: #6c757d;
+  --color-section-deparment: #6C7581;
+  --color-star: #FFBC00;
+  --color-more: #007185;
+  --color-border-card: #DEE2E6;
+  --color-title-card-product: #0F1111;
+  --color-category-card-product: #565959;
+  --color-arrow: #979797;
+  --color-badge-gb-green: #D3F6EC;
+  --color-badge-text-green: #0ACF97;
+  --color-button-bg-add-to-cart: #FA5C7C;
+  --color-button-border-add-to-cart: #f14b6c;
+  --color-button-bg-hover-add-to-cart: #ee4567;
+  --bs-table-accent-bg: #f5f6f9;
+  --color-bar-green: #0ACF97;
+  --color-bar-yellow: #FFBC00;
+}
