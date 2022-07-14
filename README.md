@@ -1,4 +1,8 @@
-# BaraBara
+### 🌟 **Proyecto del Ecommer Bara Bara**
+
+🔔 Demo: https://62cfa1d84cce310b3ee4aa82--beautiful-pothos-8b511c.netlify.app/home
+
+## BaraBara
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
