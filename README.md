@@ -1,6 +1,6 @@
 ### 🌟 **Proyecto del Ecommer Bara Bara**
 
-🔔 Demo: https://beautiful-pothos-8b511c.netlify.app/login
+🔔 Demo: https://main--deluxe-meringue-204b93.netlify.app/login
 
 ## BaraBara
 
