@@ -34,7 +34,22 @@ nav {
       list-style: none;
       padding-left: 0;
       margin: 0;
-      li {
+      li:nth-child(1) {
+        padding-right: 20px;
+        div  {
+          i {
+            font-size: 22px;
+            color: var(--color-blue-primary);
+            background-color: var(--color-white);
+            cursor: pointer;
+          }
+          span.badge {
+            padding: 3px 5px;
+            cursor: pointer;
+          }
+        }
+      }
+      li:nth-child(2) {
         &:hover > ul.list-options {
           display: block;
         }
@@ -57,9 +72,9 @@ nav {
               align-items: center;
               justify-content: center;
               i {
+                  font-size: 22px;
                   color: var(--color-blue-primary);
                   background-color: var(--color-white);
-                  font-size: 22px;
                 }
             }
           }

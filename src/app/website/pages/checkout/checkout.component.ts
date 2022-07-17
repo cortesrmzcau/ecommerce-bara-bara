@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from 'src/app/services/shared/sidebar.service';
-import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.scss']
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.scss']
 })
-export class ProductDetailComponent implements OnInit {
+export class CheckoutComponent implements OnInit {
 
   collapsed : boolean | null = null;
 
@@ -27,16 +26,6 @@ export class ProductDetailComponent implements OnInit {
         this.collapsed = res;
       }
     );
-  }
-
-  addToCart(): void {
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Product add to cart',
-      showConfirmButton: false,
-      timer: 1500
-    })
   }
 
 }

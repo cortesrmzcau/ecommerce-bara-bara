@@ -25,100 +25,111 @@
       border: 0px;
       .card-body {
         padding: 1.5rem 1.5rem;
-        .filter {
-          .sections {
-            section {
-              padding-bottom: 10px;
-              p {
-                font-size: 16px;
-                color: var(--color-section-deparment);
-                margin-bottom: 5px;
-                cursor: pointer;
-              }
-              p.title {
-                font-size: 20px;
-                font-weight: bold;
-                color: var(--color-section-deparment);
-                cursor: default;
-              }
-              .d-flex {
-                img {
-                  margin-left: 5px;
-                }
-                p {
-                  margin-left: 10px;
-                  margin-bottom: 0px;
-                }
-              }
-              .stars {
-                @include stars
-              }
-              .more {
-                i {
-                  font-size: 20px;
-                }
-                p {
-                  font-size: 15px;
-                  color: var(--color-more);
-                }
-              }
-            }
-          }
-        }
-        .product {
-          border: 1px var(--color-border-card) solid;
-          box-shadow: var(--ct-box-shadow);
-          margin-bottom: 30px;
-          border-radius: 5px;
-          cursor: pointer;
-          .content-img {
-            width: auto;
+        .divider-two {
+          width: 100%;
+          .filter {
+            width: 260px;
             height: auto;
-            img {
-              max-width: 100%;
+            .sections {
+              margin-right: 24px;
+              section {
+                padding-bottom: 10px;
+                p {
+                  font-size: 16px;
+                  color: var(--color-section-deparment);
+                  margin-bottom: 5px;
+                  cursor: pointer;
+                }
+                p.title {
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: var(--color-section-deparment);
+                  cursor: default;
+                }
+                .d-flex {
+                  img {
+                    margin-left: 5px;
+                  }
+                  p {
+                    margin-left: 10px;
+                    margin-bottom: 0px;
+                  }
+                }
+                .stars {
+                  @include stars
+                }
+                .more {
+                  i {
+                    font-size: 20px;
+                  }
+                  p {
+                    font-size: 15px;
+                    color: var(--color-more);
+                  }
+                }
+              }
             }
           }
-          .information {
-            padding: 15px;
-            .title {
-              font-size: 16px;
-              font-weight: bold;
-              color: var(--color-title-card-product);
-              margin-bottom: 0;
-            }
-            .stars {
-              @include stars
-            }
-            .category {
-              font-size: 14px;
-              font-weight: 400;
-              font-style: italic;
-              color: var(--color-category-card-product);
-              margin-bottom: 5px;
-            }
-            .d-flex {
-              p {
-                font-size: 10px;
-                font-weight: bold;
-                color: var( --color-title-card-product);
+          .products {
+            width: calc(100% - 260px);
+            height: auto;
+            margin-left: 24px;
+            .product {
+              border: 1px var(--color-border-card) solid;
+              box-shadow: var(--ct-box-shadow);
+              margin-bottom: 30px;
+              border-radius: 5px;
+              cursor: pointer;
+              .content-img {
+                width: auto;
+                height: auto;
+                img {
+                  max-width: 100%;
+                }
               }
-              div {
-                p {
-                  font-size: 28px;
+              .information {
+                padding: 15px;
+                .title {
+                  font-size: 16px;
                   font-weight: bold;
+                  color: var(--color-title-card-product);
+                  margin-bottom: 0;
+                }
+                .stars {
+                  @include stars
+                }
+                .category {
+                  font-size: 14px;
+                  font-weight: 400;
+                  font-style: italic;
+                  color: var(--color-category-card-product);
+                  margin-bottom: 5px;
+                }
+                .d-flex {
+                  p {
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: var( --color-title-card-product);
+                  }
+                  div {
+                    p {
+                      font-size: 26px;
+                      font-weight: bold;
+                      color: var( --color-title-card-product);
+                      margin-bottom: 0px;
+                    }
+                    img {
+                      max-width: 100%;
+                      max-height: 30px;
+                    }
+                  }
+                }
+                .arrived {
+                  font-size: 15px;
                   color: var( --color-title-card-product);
                   margin-bottom: 0px;
                 }
-                img {
-                  max-width: 100%;
-                  max-height: 30px;
-                }
               }
-            }
-            .arrived {
-              font-size: 15px;
-              color: var( --color-title-card-product);
-              margin-bottom: 0px;
             }
           }
         }

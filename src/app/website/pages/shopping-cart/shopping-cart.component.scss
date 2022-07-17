@@ -1,0 +1,163 @@
+@mixin text {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-grey-text);
+}
+
+@mixin input-span {
+  background-color: var(--color-brackground-button-p-border);
+  border: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 260px 100%;
+  grid-auto-rows: 1fr 1fr;
+  main {
+    width: calc(100% - 260px);
+    height: 100%;
+    background-color: var(--color-background);
+    left: auto;
+    padding: 100px 30px 30px 30px;
+    transition: all .5s ease;
+    margin-left: 0;
+    .card {
+      box-shadow: var(--ct-box-shadow);
+      border-radius: 5px;
+      border: 0px;
+      height: calc(100vh - 130px);
+      cursor: default;
+      .card-body {
+        padding: 1.5rem 1.5rem;
+        .row {
+          .col-md-8 {
+            table {
+              margin-bottom: 20px;
+              thead {
+                color: var(--color-white);
+                background-color: var(--color-blue-primary);
+                tr {
+                  line-height: 36px;
+                  th {
+                    p {
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+              }
+              tbody {
+                tr {
+                  height: 42px;
+                  line-height: 42px;
+                  td {
+                    cursor: pointer;
+                    p {
+                      color: var(--color-grey-text);
+                      margin-bottom: 0;
+                    }
+                    i {
+                      font-size: 18px;
+                      font-weight: bold;
+                      color: var(--color-grey-text);
+                      margin-bottom: 0;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+            }
+            .mb-3 {
+              label {
+                @include text;
+                margin-bottom: 10px;
+                cursor: default;
+              }
+              textarea {
+                resize: none;
+              }
+            }
+            .d-flex {
+              position: absolute;
+              bottom: 24px;
+              i {
+                font-size: 16px;
+                color: var(--color-arrow);
+                cursor: pointer;
+              }
+              p {
+                @include text;
+                margin-bottom: 0;
+                cursor: pointer;
+              }
+            }
+          }
+          .col-md-4 {
+            .content-border {
+              border-radius: 5px;
+              border: 1px var(--color-border-card) solid;
+              padding: 20px;
+              margin-bottom: 25px;
+              p {
+                font-size: 16px;
+                font-weight: bold;
+                color: var(--color-section-deparment);
+              }
+              div {
+                height: 50px;
+                border-bottom: 1px var(--border-color-order-summary) solid;
+                p {
+                  font-weight: normal;
+                  margin-left: 15px;
+                  margin-bottom: 0;
+                }
+                &:nth-child(6) {
+                  border-bottom: none;
+                }
+              }
+            }
+            .alert {
+              font-size: 15px;
+              color: #F2B300;
+              text-align: center;
+              margin-bottom: 25px;
+            }
+            .mb-3 {
+              height: 40px;
+              margin-bottom: 25px !important;
+              input {
+                @include input-span;
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+              span {
+                @include input-span;
+                cursor: pointer;
+              }
+            }
+            button {
+              width: 100%;
+              height: 60px;
+              font-size: 18px;
+              background-color: var(--color-bar-green);
+              border: 1px var(--color-border-green) solid;
+              i {
+                margin-right: 5px;
+              }
+              &:hover {
+                background-color: var(--color-hover-green);
+              }
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-collapsed {
+    width: 100%;
+    margin-left: -260px;
+  }
+}

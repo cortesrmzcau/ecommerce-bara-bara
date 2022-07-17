@@ -7,38 +7,52 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
-                <div class="d-flex align-items-center" routerLink="/home">
-                  <i class="bi bi-caret-left-fill"></i>
-                  <p>Back to results</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="d-flex align-items-center" routerLink="/home">
+                      <i class="bi bi-caret-left-fill"></i>
+                      <p>Back to results</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/G/01/prime/marketing/slashPrime/amazon-prime-delivery-checkmark._CB659998231_.png"
+                      alt="">
+                  </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <p class="title">Handmade Plastic Cheese</p>
-                <div class="stars d-flex">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                </div>
-                <span class="badge">Stock</span>
-                <button class="btn btn-primary d-flex">
-                  <i class="bi bi-cart-plus"></i>
-                  <p>Add to card</p>
-                </button>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,</p>
-                <div class="info-extra d-flex align-items-center justifi-content-center">
-                  <div>
-                    <p>Available Stock</p>
-                    <p>1,000</p>
-                  </div>
-                  <div>
-                    <p>Number of Orders</p>
-                    <p>2,000</p>
-                  </div>
-                  <div>
-                    <p>Revenue</p>
-                    <p>2,000</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="title">Handmade Plastic Cheese</p>
+                    <div class="stars d-flex">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                    <span class="badge">Stock</span>
+                    <button class="btn btn-primary d-flex" (click)="addToCart()">
+                      <i class="bi bi-cart-plus"></i>
+                      <p>Add to card</p>
+                    </button>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,</p>
+                    <div class="info-extra d-flex align-items-center justifi-content-center">
+                      <div>
+                        <p>Available Stock</p>
+                        <p>1,000</p>
+                      </div>
+                      <div>
+                        <p>Number of Orders</p>
+                        <p>2,000</p>
+                      </div>
+                      <div>
+                        <p>Revenue</p>
+                        <p>2,000</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

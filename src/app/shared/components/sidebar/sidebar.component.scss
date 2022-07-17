@@ -17,9 +17,10 @@
     .d-flex {
       height: 100%;
         div {
-          i.fa {
+          i {
             font-size: 26px;
             color: var(--color-white);
+            transform: rotate(45deg);
           }
         }
         p {
@@ -36,7 +37,7 @@
       div {
         margin: 0 auto;
         padding: 25px 0 10px 0;
-        i.fa {
+        i {
           font-size: 70px;
           color: var(--color-white);
         }
@@ -105,5 +106,5 @@
   }
 }
 .sidebar-collapsed {
-  margin-left: -260px;
+  margin-left: -260px !important;
 }

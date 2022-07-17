@@ -1,0 +1,145 @@
+<div class="content">
+  <app-sidebar></app-sidebar>
+  <main [ngClass]="collapsed ? 'main-collapsed' : ''">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-8">
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">
+                            <p>Product</p>
+                          </th>
+                          <th scope="col">
+                            <p>Price</p>
+                          </th>
+                          <th scope="col">
+                            <p>Quantity</p>
+                          </th>
+                          <th scope="col">
+                            <p>Total</p>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p>Handmade Plastic Cheese</p>
+                          </td>
+                          <td>
+                            <div>
+                              <p>$ 1000</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p>1 pz</p>
+                          </td>
+                          <td>
+                            <i class="bi bi-trash-fill" (click)="deletProduct()"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Handmade Plastic Cheese</p>
+                          </td>
+                          <td>
+                            <div>
+                              <p>$ 1000</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p>1 pz</p>
+                          </td>
+                          <td>
+                            <i class="bi bi-trash-fill"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Handmade Plastic Cheese</p>
+                          </td>
+                          <td>
+                            <div>
+                              <p>$ 1000</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p>1 pz</p>
+                          </td>
+                          <td>
+                            <i class="bi bi-trash-fill"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Add a note</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write some note..." maxlength="100"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="d-flex align-items-center" routerLink="/home">
+                      <i class="bi bi-caret-left-fill"></i>
+                      <p>Continue Shopping</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="content-border">
+                      <p>Order Summary</p>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <p>Grand Total:</p>
+                        <p>$1000</p>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <p>Discount:</p>
+                        <p>$1000</p>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <p>Shipping Charge:</p>
+                        <p>$1000</p>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <p>Estimated Tax:</p>
+                        <p>$1000</p>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <p>Total:</p>
+                        <p>$1000</p>
+                      </div>
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                      Use coupon code HYPBM and get 10% discount!
+                    </div>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Coupon code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <span class="input-group-text" id="basic-addon2" (click)="applyCoupon()">Apply</span>
+                    </div>
+                    <button type="button" class="btn btn-primary" routerLink="/checkout">
+                      <i class="bi bi-cart-plus-fill"></i>
+                      Checkout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

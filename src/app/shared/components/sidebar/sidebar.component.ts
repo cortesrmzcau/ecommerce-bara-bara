@@ -16,13 +16,17 @@ export class SidebarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.listeningCollapsed();
+  }
+
+  listeningCollapsed(): void {
     this._sidebarService.lisStatus$
-      .subscribe(
-        res => {
-          this.collapsed = res;
-          console.log(this.collapsed);
-        }
-      );
+    .subscribe(
+      res => {
+        this.collapsed = res;
+        console.log(this.collapsed);
+      }
+    );
   }
 
 }

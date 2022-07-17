@@ -55,5 +55,15 @@ body {
   --color-button-bg-hover-add-to-cart: #ee4567;
   --bs-table-accent-bg: #f5f6f9;
   --color-bar-green: #0ACF97;
+  --color-border-green: #0cb887;
+  --color-hover-green: #11b788;
   --color-bar-yellow: #FFBC00;
+  --border-color-order-summary: #EEF2F7;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: var(--color-blue-primary) !important;
+  &:focus {
+    box-shadow: 0 0 0 3px rgb(9 126 246 / 50%) !important;
+  }
 }

@@ -8,6 +8,9 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ExampleComponent } from './pages/example/example.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     LayoutComponent,
     NavComponent,
     HomeComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ExampleComponent,
+    ShoppingCartComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,

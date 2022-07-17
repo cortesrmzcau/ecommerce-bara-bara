@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +9,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  formLogin = new FormGroup({
+    userEmail: new FormControl('', Validators.email),
+    userPassword: new FormControl('', Validators.minLength(6))
+  });
+
   constructor(
     private _router: Router
   ) { }
@@ -16,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   redirect() {
+    console.log(this.formLogin.value);
     this._router.navigate(['/home']);
   }
 }
