@@ -1,6 +1,6 @@
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { SidebarService } from 'src/app/services/shared/sidebar.service';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 import Swal from 'sweetalert2';
 
 @Component({

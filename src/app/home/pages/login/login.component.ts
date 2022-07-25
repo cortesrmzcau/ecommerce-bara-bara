@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  redirect() {
+  login() {
     this._router.navigate(['/home']);
   }
 }

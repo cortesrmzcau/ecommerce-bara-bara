@@ -1,8 +1,8 @@
 import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { SidebarService } from 'src/app/services/shared/sidebar.service';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-import { NavbarService } from 'src/app/services/shared/navbar.service';
+import { NavbarService } from 'src/app/services/navbar/navbar.service';
+import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
