@@ -9,6 +9,18 @@
   border: none;
 }
 
+@mixin d-flex-i {
+  font-size: 16px;
+  color: var(--color-arrow);
+  cursor: pointer;
+}
+
+@mixin d-flex-p {
+  @include text;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
 .content {
   display: grid;
   grid-template-columns: 260px 100%;
@@ -31,63 +43,81 @@
         padding: 1.5rem 1.5rem;
         .row {
           .col-md-8 {
-            table {
-              margin-bottom: 20px;
-              thead {
-                color: var(--color-white);
-                background-color: var(--color-blue-primary);
-                tr {
-                  line-height: 36px;
-                  th {
-                    p {
-                      margin-bottom: 0;
-                    }
-                  }
-                }
-              }
-              tbody {
-                tr {
-                  height: 42px;
-                  line-height: 42px;
-                  td {
-                    cursor: pointer;
-                    p {
-                      color: var(--color-grey-text);
-                      margin-bottom: 0;
-                    }
-                    i {
-                      font-size: 18px;
-                      font-weight: bold;
-                      color: var(--color-grey-text);
-                      margin-bottom: 0;
-                      cursor: pointer;
-                    }
-                  }
-                }
-              }
-            }
-            .mb-3 {
-              label {
-                @include text;
+            .row {
+              &.cm {
+                display: none;
                 margin-bottom: 10px;
-                cursor: default;
+                .d-flex {
+                  i {
+                    @include d-flex-i;
+                  }
+                  p {
+                    @include d-flex-p;
+                  }
+                }
+                @media (max-width: 767px) {
+                  display: block;
+                }
               }
-              textarea {
-                resize: none;
+              table {
+                margin-bottom: 20px;
+                thead {
+                  color: var(--color-white);
+                  background-color: var(--color-blue-primary);
+                  tr {
+                    line-height: 36px;
+                    th {
+                      p {
+                        margin-bottom: 0;
+                      }
+                    }
+                  }
+                }
+                tbody {
+                  tr {
+                    height: 42px;
+                    line-height: 42px;
+                    td {
+                      cursor: pointer;
+                      p {
+                        color: var(--color-grey-text);
+                        margin-bottom: 0;
+                      }
+                      i {
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: var(--color-grey-text);
+                        margin-bottom: 0;
+                        cursor: pointer;
+                      }
+                    }
+                  }
+                }
               }
-            }
-            .d-flex {
-              position: absolute;
-              bottom: 24px;
-              i {
-                font-size: 16px;
-                color: var(--color-arrow);
-                cursor: pointer;
+              .mb-3 {
+                label {
+                  @include text;
+                  margin-bottom: 10px;
+                  cursor: default;
+                }
+                textarea {
+                  resize: none;
+                }
               }
-              p {
-                @include text;
-                margin-bottom: 0;
-                cursor: pointer;
+              &.co {
+                .d-flex {
+                  position: absolute;
+                  bottom: 24px;
+                  i {
+                    @include d-flex-i;
+                  }
+                  p {
+                    @include d-flex-p;
+                  }
+                }
+                @media (max-width: 767px) {
+                  display: none;
+                }
               }
             }
           }
@@ -112,6 +142,9 @@
                 }
                 &:nth-child(6) {
                   border-bottom: none;
+                }
+                @media (max-width: 885px) {
+                  height: 60px;
                 }
               }
             }
@@ -153,6 +186,9 @@
             }
           }
         }
+      }
+      @media (max-width: 767px) {
+        height: 100%;
       }
     }
   }

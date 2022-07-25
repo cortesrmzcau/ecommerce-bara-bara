@@ -138,6 +138,9 @@
                       .progress-bar {
                         background-color: var(--color-bar-green);
                       }
+                      @media (max-width: 767px) {
+                        display: none;
+                      }
                     }
                     .progress.yellow {
                       width: 100%;
@@ -145,12 +148,19 @@
                       .progress-bar {
                         background-color: var(--color-bar-yellow);
                       }
+                      @media (max-width: 767px) {
+                        display: none;
+                      }
                     }
                     p {
                       display: flex;
                       width: 100%;
                       margin-left: 20px;
                       margin-right: 20px;
+                      @media (max-width: 767px) {
+                        margin-left: 0;
+                        margin-right: 0;
+                      }
                     }
                   }
                 }
@@ -158,6 +168,9 @@
             }
           }
         }
+      }
+      @media (max-width: 767px) {
+        height: 100%;
       }
     }
   }

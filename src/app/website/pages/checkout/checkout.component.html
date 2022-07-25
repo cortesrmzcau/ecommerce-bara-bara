@@ -5,6 +5,347 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-body">
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="shipping-payment d-flex">
+                  <div class="shipping-info">
+                    <button [ngClass]="shippingInfo? 'btn btn-primary' : 'btn btn-default'">
+                      <i class="bi bi-truck" #icono1></i>
+                      <p #text1>Shipping Info</p>
+                    </button>
+                  </div>
+                  <div class="payment-info">
+                    <button [ngClass]="paymentInfo? 'btn btn-primary' : 'btn btn-default'">
+                      <i class="bi bi-cash" #icono2></i>
+                      <p #text2>Payment Info</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="row">
+              <div class="col-md-8">
+                <div *ngIf="shippingInfo" class="shipping-info">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Billing Information</p>
+                      <p>Fill the form below in order to send you the order's invoice</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="firstName" class="form-label d-flex">First Name<p>*</p></label>
+                        <input input="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="lastName" class="form-label d-flex">Last Name<p>*</p></label>
+                        <input input="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="emailUser" class="form-label d-flex">Email Address<p>*</p></label>
+                        <input input="email" class="form-control" id="emailUser" placeholder="Enter your email">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="phoneUser" class="form-label d-flex">Phone<p>*</p></label>
+                        <input input="text" class="form-control" id="phoneUser" placeholder="(xx) xxx xxx xxx">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label for="addressUser" class="form-label d-flex">Address<p>*</p></label>
+                        <input input="text" class="form-control" id="addressUser" placeholder="Enter your address">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label for="twonUser" class="form-label d-flex">Twon / City<p>*</p></label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Select twon / city</option>
+                          <option value="1">Alvaro Obregon</option>
+                          <option value="2">Santa fe</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label for="stateUser" class="form-label d-flex">State<p>*</p></label>
+                        <input input="text" class="form-control" id="stateUser" placeholder="Enter your state">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label for="stateUser" class="form-label d-flex">Zip / Postal Code<p>*</p></label>
+                        <input input="text" class="form-control" id="stateUser" placeholder="Enter your zip code">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="referenceUser" class="form-label d-flex">Reference<p>*</p></label>
+                        <input input="text" class="form-control" id="referenceUser" placeholder="Enter your reference">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="twonUser" class="form-label d-flex">Address Type<p>*</p></label>
+                        <select class="form-select" aria-label="twonUser">
+                          <option selected>Select address type</option>
+                          <option value="1">Home</option>
+                          <option value="2">Office</option>
+                          <option value="3">Work</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Shipping Method</p>
+                      <p>Fill the form below in order to send you the order's invoice</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="d-flex">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio"
+                            name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        </div>
+                        <div>
+                          <p>Standard Delivery - FREE</p>
+                          <p>Estimated 5-7 days shipping (Duties and tax may be due upon delivery)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio"
+                            name="flexRadioDefault" id="flexRadioDefault2" check>
+                        </div>
+                        <div>
+                          <p>Fast Delivery - $25</p>
+                          <p>Estimated 1-2 days shipping (Duties and tax may be due upon delivery)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div *ngIf="paymentInfo" class="paymentInfo">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Payment Selection</p>
+                      <p>Fill the form below in order to send you the order's invoice</p>
+                    </div>
+                  </div>
+                  <div class="row mb-3 paypal-oxxo">
+                    <div class="col-md-12">
+                      <div class="type">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="d-flex">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" checked
+                                name="flexRadioDefault" id="flexRadioDefault1">
+                            </div>
+                            <div>
+                              <p>Pay with Paypal</p>
+                              <p>You will be redirected to PayPal website to complete your purchase securely.</p>
+                            </div>
+                          </div>
+                          <img src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png"
+                            alt="" height="50px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-3 credit-card">
+                    <div class="col-md-12">
+                      <div class="type">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                          <div class="d-flex">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio"
+                                name="flexRadioDefault" id="flexRadioDefault2">
+                            </div>
+                            <div>
+                              <p>Credit / Debit Card</p>
+                              <p>Safe money transfer using your bank account. We support Mastercard, Visa, Discover and Stripe.</p>
+                            </div>
+                          </div>
+                          <img src="http://uniemprendia.es/wp-content/uploads/2018/10/Visa-MasterCard-1024x393.png"
+                            alt="" height="40px">
+                        </div>
+                        <div class="dates">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label for="cardNumberUser" class="form-label d-flex">Card Number<p>*</p></label>
+                                <input input="text" class="form-control" id="cardNumberUser" placeholder="123 123 123 123 123 123">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label for="cardUser" class="form-label d-flex">Name on Number<p>*</p></label>
+                                <input input="text" class="form-control" id="cardUser" placeholder="Enter name on card">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <div class="mb-3">
+                                <label for="monthCardUser" class="form-label d-flex">Expiry date<p>*</p></label>
+                                <select class="form-select" aria-label="Default select example">
+                                  <option value="1">01</option>
+                                  <option value="2">02</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-3">
+                                <label for="monthCardUser" class="form-label d-flex">&nbsp;</label>
+                                <select class="form-select" aria-label="Default select example">
+                                  <option value="1">01</option>
+                                  <option value="2">02</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-3">
+                                <label class="form-label d-flex">CCV code<p>*</p></label>
+                                <input input="text" class="form-control" placeholder="000">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row paypal-oxxo">
+                    <div class="col-md-12">
+                      <div class="type">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="d-flex">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio"
+                                name="flexRadioDefault" id="flexRadioDefault3">
+                            </div>
+                            <div>
+                              <p>Pay cash at OXXO</p>
+                              <p>Pay before 48 hours</p>
+                            </div>
+                          </div>
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/1200px-Oxxo_Logo.svg.png"
+                            alt="" height="40px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="table-responsive">
+                  <p>Order Summary</p>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <img src="https://m.media-amazon.com/images/G/01/prime/marketing/slashPrime/amazon-prime-delivery-checkmark._CB659998231_.png"
+                            alt="" height="30px">
+                            <div>
+                              <p>Handmade Plastic Cheese</p>
+                              <p>1 x $1000</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>$1000</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <img src="https://m.media-amazon.com/images/G/01/prime/marketing/slashPrime/amazon-prime-delivery-checkmark._CB659998231_.png"
+                            alt="" height="30px">
+                            <div>
+                              <p>Handmade Plastic Cheese</p>
+                              <p>1 x $1000</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>$1000</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <img src="https://m.media-amazon.com/images/G/01/prime/marketing/slashPrime/amazon-prime-delivery-checkmark._CB659998231_.png"
+                            alt="" height="30px">
+                            <div>
+                              <p>Handmade Plastic Cheese</p>
+                              <p>1 x $1000</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>$1000</p>
+                        </td>
+                      </tr>
+                      <tr class="text-end">
+                        <td>
+                          <p class="mt-2">Subtotal</p>
+                        </td>
+                        <td>
+                          <p class="mt-2">$1000</p>
+                        </td>
+                      </tr>
+                      <tr class="text-end">
+                        <td>
+                          <p class="mt-2">Shipping</p>
+                        </td>
+                        <td>
+                          <p class="mt-2">FREE</p>
+                        </td>
+                      </tr>
+                      <tr class="text-end">
+                        <td>
+                          <p class="mt-2">Total</p>
+                        </td>
+                        <td>
+                          <p class="mt-2">$1000</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button type="button" class="btn btn-primary mt-4" (click)="changePayInfo()">
+                  <i class="bi bi-cash"></i>
+                  Continue to Payment
+                </button>
+              </div>
+            </form>
+            <div class="row mt-4 back">
+              <div class="col-md-12">
+                <div class="d-flex align-items-center" routerLink="/home">
+                  <i class="bi bi-caret-left-fill"></i>
+                  <p> {{ backToResults }} </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg" [ngClass]="collapsed ? 'nav-collapsed' : ''">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" (click)="toggleHidden()">
           <i class="bi bi-list"></i>
@@ -51,6 +51,21 @@
           </ul>
         </li>
       </ul>
+    </div>
+    <div class="sub-nav" [ngClass]="filter ? 'd-block': ''">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center img-switch">
+          <img src="https://m.media-amazon.com/images/G/01/prime/marketing/slashPrime/amazon-prime-delivery-checkmark._CB659998231_.png"
+            alt="" height="25px">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          </div>
+        </div>
+        <div class="d-flex align-items-center filters">
+          <p>Filters</p>
+          <i class="bi bi-caret-down-fill"></i>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

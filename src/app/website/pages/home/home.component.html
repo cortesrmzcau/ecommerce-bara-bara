@@ -3,10 +3,10 @@
   <main [ngClass]="collapsed ? 'main-collapsed' : ''">
     <div class="row">
       <div class="col-md-12">
-        <div class="card" #card id="card">
+        <div class="card" [ngClass]="paddingTop ? 'paddingTop' : ''">
           <div class="card-body">
             <div class="divider-two d-flex">
-              <div class="filter d-flex">
+              <div class="filter d-flex" [ngClass]="filter? 'd-none': ''">
                 <div class="sections">
                   <div class="row">
                     <div class="col-md-12">

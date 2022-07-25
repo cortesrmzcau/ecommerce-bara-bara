@@ -1,1 +1,11 @@
-<p>example works!</p>
+<p>Array</p>
+
+<ul *ngFor="let element of arrayExample">
+  <li>{{ element }}</li>
+</ul>
+
+<p>Objets</p>
+
+<ul *ngFor="let element2 of objetsExample">
+  <li> {{ element2.id }} - {{ element2.name }} - {{ element2.age | date }} - {{ element2.money | currency }} </li>
+</ul>

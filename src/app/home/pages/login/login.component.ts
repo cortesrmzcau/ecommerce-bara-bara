@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   }
 
   redirect() {
-    console.log(this.formLogin.value);
     this._router.navigate(['/home']);
   }
 }
