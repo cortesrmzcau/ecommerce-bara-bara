@@ -34,7 +34,7 @@ nav {
       list-style: none;
       padding-left: 0;
       margin: 0;
-      li:nth-child(1) {
+      li.icon-car {
         padding-right: 20px;
         div  {
           i {
@@ -49,17 +49,17 @@ nav {
           }
         }
       }
-      li:nth-child(2) {
+      li.btn-profile {
         &:hover > ul.list-options {
           display: block;
         }
         div.d-flex.button-profile {
           display: flex;
-          width: 180px;
+          width: 185px;
           height: 70px;
           background-color: var(--color-brackground-button-p);
           border: var(--color-brackground-button-p-border) 1px solid;
-          padding: 0px 15px;
+          padding: 0px 10px;
           cursor: pointer;
           div.d-flex.align-items-center {
             .background-circle {

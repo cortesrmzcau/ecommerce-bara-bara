@@ -2,6 +2,9 @@ import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/co
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { NavbarService } from 'src/app/services/navbar/navbar.service';
 import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { User } from 'src/app/models/user.mode';
+import { TokenService } from 'src/app/services/token/token.service';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +18,15 @@ export class HomeComponent implements OnInit, AfterViewInit  {
   filter: boolean | null = null;
   paddingTop: boolean | null = null;
 
+  user: User | null = null;
+
   constructor(
     private _cd: ChangeDetectorRef,
-    private _sidebarService: SidebarService,
+    public breakpointObserver: BreakpointObserver,
     private _navbarService: NavbarService,
-    public breakpointObserver: BreakpointObserver
+    private _sidebarService: SidebarService,
+    private _tokenService: TokenService,
+    private _authService: AuthService
   ) {
     this.paddingTop = false;
   }
@@ -31,6 +38,13 @@ export class HomeComponent implements OnInit, AfterViewInit  {
   ngAfterViewInit(): void {
     this.listeningQuery();
     this.listeningSubNav();
+  }
+
+  userInfo() {
+    const token = this._tokenService.getToken();
+    if (token) {
+      this._authService.getProfile().subscribe(res => console.log(res))
+    }
   }
 
   listeningSubNav(): void {

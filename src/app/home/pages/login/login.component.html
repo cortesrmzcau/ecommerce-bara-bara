@@ -13,25 +13,37 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form [formGroup]="formLogin">
+          <form [formGroup]="formLogin" (ngSubmit)="login()" autocomplete="off">
             <div class="mb-3">
               <label for="emailFormControl" class="form-label">Email address</label>
-              <input type="email" class="form-control"
-                id="emailFormControl"
-                placeholder="Enter your email"
-                formControlName="userEmail"
-                required>
+              <input type="text" class="form-control" id="emailFormControl"
+                placeholder="Enter your email" formControlName="userEmail" autocomplete="off"
+                [ngClass]="{ 'is-invalid': userEmail?.invalid && (userEmail?.dirty || userEmail?.touched) }">
+                <div class="container-error-message mt-2"
+                  *ngIf="userEmail?.invalid && userEmail?.errors?.['required']">
+                  <p>Email is required</p>
+                </div>
+                <div class="container-error-message mt-2"
+                  *ngIf="(userEmail?.dirty || userEmail?.touched) && userEmail?.invalid && userEmail?.errors?.['pattern']">
+                  <p>Value has to be a valid email address.</p>
+                </div>
             </div>
             <div class="mb-3">
               <label for="passwordFormControl" class="form-label">Password</label>
-              <input type="password" class="form-control"
-                id="passwordFormControl"
-                placeholder="Enter your password"
-                formControlName="userPassword"
-                required>
+              <input type="password" class="form-control" id="passwordFormControl"
+                placeholder="Enter your password" formControlName="userPassword" autocomplete="off"
+                [ngClass]="{ 'is-invalid': userPassword?.invalid && (userPassword?.dirty || userPassword?.touched) }">
+                <div class="alert-danger" *ngIf="userPassword?.invalid && (userPassword?.dirty || userPassword?.touched)">
+                  <div class="container-error-message mt-2" *ngIf="userPassword?.errors?.['required']">
+                    <p>Password is required</p>
+                  </div>
+                  <div class="container-error-message mt-2" *ngIf="userPassword?.errors?.['minlength']">
+                    <p>Password must be at least 6 characters long.</p>
+                  </div>
+                </div>
             </div>
             <div class="mb-3">
-              <button type="button" class="btn btn-primary button-p" (click)="login()">Login</button>
+              <button type="submit" class="btn btn-primary button-p" [disabled]="formLogin.invalid">Login</button>
             </div>
             <p class="text-12">You still do not have an account? <a routerLink="/sig-in" class="text-redirect">Sign up</a></p>
             <div class="social">

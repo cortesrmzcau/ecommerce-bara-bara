@@ -13,15 +13,15 @@
       </ul>
 
       <ul class="d-flex align-items-center navbar-nav-two">
-        <li>
-          <div class="position-relative" routerLink="/shopping-cart">
+        <li class="icon-car" *ngIf="user?.role === 'customer'? '' : 'd-none'" (click)="redirectShoppingCart()">
+          <div class="position-relative">
             <i class="bi bi-cart-fill"></i>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               1
             </span>
           </div>
         </li>
-        <li>
+        <li class="btn-profile">
           <div class="d-flex button-profile">
             <div class="d-flex align-items-center">
               <div class="background-circle">
@@ -30,8 +30,8 @@
             </div>
             <div class="name-type">
               <div>
-                <p>César Cortés</p>
-                <p>Custom</p>
+                <p>{{ user?.name }}</p>
+                <p>{{ user?.role }}</p>
               </div>
             </div>
           </div>
@@ -42,9 +42,9 @@
             </li>
             <li class="d-flex align-items-center">
               <i class="bi bi-gear-fill"></i>
-              <p>Profile</p>
+              <p>Settings</p>
             </li>
-            <li class="d-flex align-items-center">
+            <li class="d-flex align-items-center" (click)="logOut()">
               <i class="bi bi-box-arrow-right"></i>
               <p>Log out</p>
             </li>

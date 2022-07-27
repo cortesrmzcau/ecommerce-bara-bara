@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 
-import { switchMap, tap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 
 import { TokenService } from '../token/token.service';
 import { Auth } from 'src/app/models/auth.mode';
@@ -14,7 +14,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
 
-  private API = `^${environment.API_URL}/api/auth`;
+  private API = `${environment.API_URL}/api/auth`;
   private user = new BehaviorSubject<User | null >(null);
   user$ = this.user.asObservable();
 

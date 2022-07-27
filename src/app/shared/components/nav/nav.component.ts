@@ -1,8 +1,13 @@
-import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { NavbarService } from 'src/app/services/navbar/navbar.service';
 import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { User } from 'src/app/models/user.mode';
+import { TokenService } from 'src/app/services/token/token.service';
+
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -13,21 +18,36 @@ export class NavComponent implements OnInit, AfterViewChecked {
   collapsed: boolean | null = false;
   filter: boolean | null = null;
 
+  user: User | null = null;
+  role: boolean | null = null;
+
   constructor(
     private _cd: ChangeDetectorRef,
     private _router: Router,
+    public breakpointObserver: BreakpointObserver,
     private _sidebarService: SidebarService,
     private _navbarService: NavbarService,
-    public breakpointObserver: BreakpointObserver
-  ) {
-  }
+    private _authService: AuthService,
+    private _tokenService: TokenService,
+  ) { }
 
   ngOnInit(): void {
+    this.userInfo();
     this.listeningQuery();
   }
 
   ngAfterViewChecked() {
     this.listeningSubNav();
+  }
+
+  userInfo() {
+    const token = this._tokenService.getToken();
+    if (token) {
+      this._authService.getProfile()
+        .subscribe(res => {
+          this.user = res;
+        })
+    }
   }
 
   toggleHidden() {
@@ -63,6 +83,16 @@ export class NavComponent implements OnInit, AfterViewChecked {
           this._cd.detectChanges();
         }
       });
+  }
+
+  logOut(): void {
+    this._authService.logOut();
+    this.user = null;
+    this._router.navigate(['/login']);
+  }
+
+  redirectShoppingCart() {
+    this._router.navigate(['shopping-cart']);
   }
 
 }
